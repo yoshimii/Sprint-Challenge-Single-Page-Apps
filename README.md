@@ -24,27 +24,29 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
-- [ ] Explain benefit(s) using `client-side routing`?
-> Answer:
-- [ ] What does AJAX stand for?
-> Answer:
-- [ ] What are `controlled components` in React?
-> Answer:
+- [x] Explain benefit(s) using `client-side routing`?
+> Answer: Client side routing loads everything once and only renders dynamic components when state changes. These state changes are generally user interactions. So when a user lands on the homepage of a website, all components are available to the user, but say only the navbar and call to action are on the screen. When the user clicks on the call the action, state changes and routs to the component that might be a sign up form. Because our navbar is something that is always visible it was only rendered once leaving system resources available to do other work. This is the idea all around. Less data is processed which has lots of benefits like routing between views faster. Because everything in client side routing is broken up into components for simplicity and control it is also great for scalability (after all React which was created with this in mind!).
+
+- [x] What does AJAX stand for?
+> Answer:AJAX stands for Asynchronous JavaScript and XML. This is the combo of asynchronous (single-threaded JavaScript) code and XML, which is how we write data to the DOM. In React we’ve been using JSX which is how we’ve been writing data to the DOM. 
+
+- [x] What are `controlled components` in React?
+> Answer:Controlled components are React components that combine setState and element value to keep state locked in. The components and elements we’ve seen in lecture that do this are the form components and elements like input and textarea. Form elements avail themselves of this advantage by their nature of having a value attribute. Value is a way of storing state that’s built into these elements. We use React to extend that state across the component. It’s pretty genius. 
 
 
 ## Project Set Up
 
 Follow these steps to set up and work on your project:
 
-- [ ] Create a forked copy of this project.
-- [ ] Add TL as collaborator on GitHub.
-- [ ] Clone your OWN version of Repo (Not Lambda's by mistake!).
-- [ ] Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
-- [ ] Implement the project on this branch, committing changes regularly.
-- [ ] Push commits: `git push origin <firstName-lastName>`.
-- [ ] **LOOK** at your project directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
-- [ ] **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
-- [ ] **RUN** `yarn start` or `npm start` to fire up your React application.
+- [x] Create a forked copy of this project.
+- [x] Add TL as collaborator on GitHub.
+- [x] Clone your OWN version of Repo (Not Lambda's by mistake!).
+- [x] Create a new Branch on the clone: `git checkout -b <firstName-lastName>`.
+- [x] Implement the project on this branch, committing changes regularly.
+- [x] Push commits: `git push origin <firstName-lastName>`.
+- [x] **LOOK** at your project directory and notice it's just a plain ol' React App that we've built using `create-react-app`.
+- [x] **RUN** `yarn install` or `npm install` to retrieve the client-side dependencies.
+- [x] **RUN** `yarn start` or `npm start` to fire up your React application.
 
 
 #### Exceeded rate limits?
@@ -90,15 +92,15 @@ Create 3 page components to display data from 3 API endpoints:
 - `https://rickandmortyapi.com/api/location/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-locations)
 - `https://rickandmortyapi.com/api/episode/` - [`docs`](https://rickandmortyapi.com/documentation/#get-all-episodes)
 - You will need to add a EpisodeList and EpisodeCard component yourself.
-- [ ] Read the [Rick & Morty API](https://rickandmortyapi.com/documentation/) docs.
-- [ ] Create a component to show a grid of data from the API.
-  - [ ] Include `useState`, `useEffect`.
-  - [ ] Use `Axios` (or `fetch`) to make a GET request to the 3 endpoints.
+- [x] Read the [Rick & Morty API](https://rickandmortyapi.com/documentation/) docs.
+- [x] Create a component to show a grid of data from the API.
+  - [x] Include `useState`, `useEffect`.
+  - [x] Use `Axios` (or `fetch`) to make a GET request to the 3 endpoints.
   - _Example API Endpoint: `https://rickandmortyapi.com/api/character/`_
-  - [ ] Display API results using a [card](https://react.semantic-ui.com/views/card/#content-image-card) grid or [list](https://react.semantic-ui.com/elements/list/#content-icon) UI on the page.
-  - [ ] Design each 'page' layout based on the available fields. (See docs for [schema](https://rickandmortyapi.com/documentation/#character-schema) details.)
-  - [ ] Use a styling or component library for part of or all of your application. (Pick at least 1 of: [Semantic-UI](https://react.semantic-ui.com), [React Bootstrap](https://react-bootstrap.github.io/), [Material-UI](https://material-ui.com/), [styled components](https://www.styled-components.com/), [emotion](https://emotion.sh/docs/introduction)), etc.
-  - [ ] Before adding routing, 'spot' check each component manually by importing into `App.js` and adding to JSX.
+  - [x] Display API results using a [card](https://react.semantic-ui.com/views/card/#content-image-card) grid or [list](https://react.semantic-ui.com/elements/list/#content-icon) UI on the page.
+  - [x] Design each 'page' layout based on the available fields. (See docs for [schema](https://rickandmortyapi.com/documentation/#character-schema) details.)
+  - [x] Use a styling or component library for part of or all of your application. (Pick at least 1 of: [Semantic-UI](https://react.semantic-ui.com), [React Bootstrap](https://react-bootstrap.github.io/), [Material-UI](https://material-ui.com/), [styled components](https://www.styled-components.com/), [emotion](https://emotion.sh/docs/introduction)), etc.
+  - [x] Before adding routing, 'spot' check each component manually by importing into `App.js` and adding to JSX.
 
 > 💡**Reminder:** `git commit -am 'Card UI Loading Data Successfully'`
 
