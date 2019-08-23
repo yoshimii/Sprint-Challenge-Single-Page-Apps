@@ -33,6 +33,7 @@ const [characters, setCharacters] = useState([]);
                 name={char.name}
                 status={char.status}
                 species={char.species}
+                mug={char.image}
               />
             );
           })}

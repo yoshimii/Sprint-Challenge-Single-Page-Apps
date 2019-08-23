@@ -1,39 +1,37 @@
 import React, { useEffect, useState } from "react";
 import { Container, Grid } from 'semantic-ui-react';
 
-import LocationCard from './LocationCard';
+import EpisodeCard from './EpisodeCard';
 
 import Axios from "axios";
 
-export default function LocationsList() {
-    const [locations, setLocations] = useState([]);
+export default function EpisodeList() {
+    const [episodes, setEpisodes] = useState([]);
 
   useEffect(() => {
-   Axios.get('https://rickandmortyapi.com/api/location/', {
+   Axios.get('https://rickandmortyapi.com/api/episode/', {
      params: {}//optional params
    }).then(res => {
-     const locations = res.data.results;
-    setLocations(locations);
+     const episodes = res.data.results;
+    setEpisodes(episodes);
    });
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   });
 
   return (
     <section className="location-list grid-view">
-      <h2>Locations</h2>
+      <h2>Episodes</h2>
       <Container text>
       <Grid relaxed columns={3} divided="vertically">
         <Grid.Row padded="vertically" columns={3}>
-          {locations.map(loc => {
+          {episodes.map(ep => {
             return (
-              <LocationCard
-                key={loc.id}
-                id={loc.id}
-                name={loc.name}
-                type={loc.type}
-                dimension={loc.dimension}
-                // residents={loc.residents}
-                mug={loc.image}
+              <EpisodeCard
+                key={ep.id}
+                id={ep.id}
+                name={ep.name}
+                airdate={ep.air_date}
+                // characters={ep.characters}
               />
             );
           })}
