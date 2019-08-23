@@ -24,12 +24,14 @@ In this challenge, you will create a Single Page Application complete with Clien
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
-- [ ] Explain benefit(s) using `client-side routing`?
-> Answer:
-- [ ] What does AJAX stand for?
-> Answer:
-- [ ] What are `controlled components` in React?
-> Answer:
+- [x] Explain benefit(s) using `client-side routing`?
+> Answer: Client side routing loads everything once and only renders dynamic components when state changes. These state changes are generally user interactions. So when a user lands on the homepage of a website, all components are available to the user, but say only the navbar and call to action are on the screen. When the user clicks on the call the action, state changes and routs to the component that might be a sign up form. Because our navbar is something that is always visible it was only rendered once leaving system resources available to do other work. This is the idea all around. Less data is processed which has lots of benefits like routing between views faster. Because everything in client side routing is broken up into components for simplicity and control it is also great for scalability (after all React which was created with this in mind!).
+
+- [x] What does AJAX stand for?
+> Answer:AJAX stands for Asynchronous JavaScript and XML. This is the combo of asynchronous (single-threaded JavaScript) code and XML, which is how we write data to the DOM. In React we’ve been using JSX which is how we’ve been writing data to the DOM. 
+
+- [x] What are `controlled components` in React?
+> Answer:Controlled components are React components that combine setState and element value to keep state locked in. The components and elements we’ve seen in lecture that do this are the form components and elements like input and textarea. Form elements avail themselves of this advantage by their nature of having a value attribute. Value is a way of storing state that’s built into these elements. We use React to extend that state across the component. It’s pretty genius. 
 
 
 ## Project Set Up
