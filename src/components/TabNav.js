@@ -4,8 +4,7 @@ import WelcomePage from './WelcomePage';
 import CharacterList from './CharacterList';
 import LocationsList from "./LocationsList.js";
 import EpisodeList from './EpisodeList';
-import App from '../App';
-import { Tab, Menu, Icon } from "semantic-ui-react";
+import { Tab } from "semantic-ui-react";
 
 
 // TODO: Add missing tabs below
