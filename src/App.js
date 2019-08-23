@@ -4,8 +4,10 @@ import TabNav from "./components/TabNav.js";
 import {TabNavPanes} from './components/TabNav';
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList.js";
+import CharacterCard from './components/CharacterCard';
 import LocationsList from "./components/LocationsList.js";
 import EpisodeList from "./components/EpisodeList.js";
+import WelcomePage from "./components/WelcomePage.js";
 
 
 export default function App() {
@@ -20,8 +22,8 @@ export default function App() {
       <EpisodeList /> */}
 
     </main>,
-        
-        <Route path = '/characters' component={CharacterList} />,
+        <Route exact path = '/' component={WelcomePage} />,
+        <Route path = '/character/:id' component={CharacterCard} />,
         <Route path = '/episodes' component={EpisodeList} />,
         <Route path = '/locations' component={LocationsList} />
   ]);

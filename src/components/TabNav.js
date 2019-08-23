@@ -25,7 +25,7 @@ export default function TabNav() {
         { menuItem: 'Home', render: () =><Tab.Pane><NavLink to='/'><WelcomePage /></NavLink></Tab.Pane> },
       { menuItem: 'Characters', render: () => <Tab.Pane><NavLink to='/characters'><CharacterList/></NavLink></Tab.Pane> },
       { menuItem: 'Locations', render: () => <Tab.Pane><NavLink to='/locations'><LocationsList/></NavLink></Tab.Pane> },
-      { menuItem: 'Episodes', render: () => <Tab.Pane><NavLink to='/'episodes><EpisodeList/></NavLink></Tab.Pane> },
+      { menuItem: 'Episodes', render: () => <Tab.Pane><NavLink to='/episodes'><EpisodeList/></NavLink></Tab.Pane> },
     ]
     
     const TabNavPanes = () => <Tab panes={panes} />

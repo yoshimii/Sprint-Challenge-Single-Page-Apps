@@ -14,9 +14,12 @@ export default function EpisodeList() {
    }).then(res => {
      const episodes = res.data.results;
     setEpisodes(episodes);
-   });
+   })
+   .catch((err) => {
+    console.log(err);
+  })
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  });
+  }, []);
 
   return (
     <section className="location-list grid-view">

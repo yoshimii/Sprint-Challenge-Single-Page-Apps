@@ -14,7 +14,10 @@ export default function LocationsList() {
    }).then(res => {
      const locations = res.data.results;
     setLocations(locations);
-   });
+   })
+   .catch((err) => {
+    console.log(err);
+  })
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
   });
 
@@ -32,7 +35,7 @@ export default function LocationsList() {
                 name={loc.name}
                 type={loc.type}
                 dimension={loc.dimension}
-                // residents={loc.residents}
+                residents={loc.residents.length}
                 mug={loc.image}
               />
             );

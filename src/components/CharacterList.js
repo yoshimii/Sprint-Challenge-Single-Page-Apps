@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Container, Grid } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 import CharacterCard from './CharacterCard';
 
@@ -12,12 +13,15 @@ const [characters, setCharacters] = useState([]);
   useEffect(() => {
    Axios.get('https://rickandmortyapi.com/api/character/', {
      params: {}//optional params
-   }).then(res => {
+   }, []).then(res => {
      const characters = res.data.results;
     setCharacters(characters);
-   });
+   })
+   .catch((err) => {
+     console.log(err);
+   })
     //  Important: verify the 2nd `useEffect` parameter: the dependancies array!
-  });
+  }, []);
 
   return (
     <section className="character-list grid-view">
@@ -27,6 +31,7 @@ const [characters, setCharacters] = useState([]);
         <Grid.Row padded="vertically" columns={3}>
           {characters.map(char => {
             return (
+              
               <CharacterCard
                 key={char.id}
                 id={char.id}
